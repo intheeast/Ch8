@@ -1,25 +1,20 @@
 package tacos;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
 
 @Data
+@NoArgsConstructor(force=true)
+@RequiredArgsConstructor
 public class Ingredient {
 
-	private String id;
-  private String name;
-  private Type type;
-  
-  public Ingredient() { // Default constructor
-  }
+  private final String name;
+  private final Type type;
 
-  public Ingredient(String id, String name, Type type) { // Custom constructor
-      this.id = id;
-	  this.name = name;
-      this.type = type;
-  }
-  
-  public static enum Type {
+  public enum Type {
     WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
   }
-  
+
 }

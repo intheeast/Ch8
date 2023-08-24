@@ -23,10 +23,11 @@ spring:
 spring:
   config:
     activate:
-      on-profile: kafka-listener
+      on-profile: kafka-listener 
     
   kafka:
-    bootstrap-servers: 15.165.75.166:9092
+    bootstrap-servers: 43.200.164.243:9092
+#    bootstrap-servers: 15.165.75.166:9092
     template:
       default-topic: tacocloud_orders
     consumer:

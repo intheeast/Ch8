@@ -29,8 +29,7 @@ public class Order implements Serializable {
   private static final long serialVersionUID = 1L;
   
   @Id
-  @GeneratedValue(strategy=GenerationType.AUTO)
-  //@JsonIgnore
+  @GeneratedValue(strategy=GenerationType.AUTO)  
   private Long id;
   
   private Date placedAt;
@@ -39,7 +38,7 @@ public class Order implements Serializable {
   // 직렬화시 제외하기 위해 사용한,
   // @JsonIgnore이 문제가 될 수 있음.
   @ManyToOne
-  @JsonIgnore
+  //@JsonIgnore
   private User user;
   
   @NotBlank(message="Delivery name is required")
